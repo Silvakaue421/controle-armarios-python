@@ -1,51 +1,44 @@
-## Criação dos Armarios  ##
 import json
+import os
+import sys
 from datetime import datetime, timedelta
 
-armarios = {
-    1: None,
-    2: None,
-    3: None,
-    4: None,
-    5: None,
-    6: None,
-    7: None,
-    8: None,
-    9: None,
-    10: None,
-    11: None,
-    12: None,
-    13: None,
-    14: None,
-    15: None,
-    16: None,
-    17: None,
-    18: None,
-    19: None,
-    20: None
-      }
+if getattr(sys, "frozen", False):
+    PASTA_PROJETO = os.path.dirname(sys.executable)
+else:
+     PASTA_PROJETO = os.path.dirname(os.path.abspath(__file__))
+ARQUIVO_JSON = os.path.join(PASTA_PROJETO, "armarios.json")
+
+## Criação dos Armarios  ##
+TOTAL_ARMARIOS = 21
+armarios = {i: None for i in range(1, TOTAL_ARMARIOS + 1)}
+
 
 
 ## Salvando e Carregando os dados com o JSON ##
 
 def salvar_dados():
-    with open ('armarios.json', 'w', encoding = 'utf-8') as arquivo:
-        json.dump(armarios, arquivo, ensure_ascii = False, indent = 4) 
+   with open(ARQUIVO_JSON, 'w', encoding='utf-8') as arquivo:
+       json.dump(armarios, arquivo, ensure_ascii = False, indent = 4) 
 
 
 def carregar_dados():
-
     global armarios
 
     try:
-        with open ('armarios.json', 'r', encoding = 'utf-8') as arquivo:
+        with open(ARQUIVO_JSON, 'r', encoding='utf-8') as arquivo:
             dados_json = json.load(arquivo)
-            armarios = {int(chave): valor for chave, valor in dados_json.items()}
 
-    except FileNotFoundError:
+        base = {i: None for i in range(1, 22)}
 
-        print ('Arquivo JSON não encontrado.')
+        for chave, valor in dados_json.items():
+            base[int(chave)] = valor
 
+        armarios = base
+
+    except:
+        armarios = {i: None for i in range(1, 24)}
+        salvar_dados()
 
 ## Expiração de reservas ##
 
@@ -75,6 +68,7 @@ def mostrar_armarios():
     print("\n ------ Armarios Disponivies ------")
     
     for numero, dados in armarios.items():
+        
         if dados is None:
             print ('Armario {}: 🟩 Disponivel '.format(numero))
         else:
@@ -163,34 +157,34 @@ def pedir_numero_armario():
 
 
 ## Criação do Menu ##
+if __name__ == "__main__":
+    carregar_dados()
+    verificar_expiracao()
+    while True:
+        print (' ----- Controle de Armarios -----')
+        print ('[1] - Mostrar Armarios')
+        print ('[2] - Reservar Armarios')
+        print ('[3] - Liberar Armarios')
+        print ('[4] - Consultar Armarios')
+        print ('[0] - Sair')
+        print (' --------------------------------')
 
-carregar_dados()
-verificar_expiracao()
+        opcao = input("Digite a opcao desejada: ")
+        if opcao == '1':
+            mostrar_armarios()
+        elif opcao == '2':
+            reservar_armarios()
+        elif opcao == '3':
+            liberar_armarios()
+        elif opcao == '4':
+            consultar_armarios()
+        elif opcao == '0':
+            print ('Saindo do programa...')
+            break
+        else:
+            print ('Opcao invalida ! Digite novamente.')
 
 
-while True:
-    print (' ----- Controle de Armarios -----')
-    print ('[1] - Mostrar Armarios')
-    print ('[2] - Reservar Armarios')
-    print ('[3] - Liberar Armarios')
-    print ('[4] - Consultar Armarios')
-    print ('[0] - Sair')
-    print (' --------------------------------')
-
-    opcao = input("Digite a opcao desejada: ")
-    if opcao == '1':
-        mostrar_armarios()
-    elif opcao == '2':
-        reservar_armarios()
-    elif opcao == '3':
-        liberar_armarios()
-    elif opcao == '4':
-        consultar_armarios()
-    elif opcao == '0':
-        print ('Saindo do programa...')
-        break
-    else:
-        print ('Opcao invalida ! Digite novamente.')
 
 
 
