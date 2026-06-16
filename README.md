@@ -16,11 +16,11 @@ Projeto desenvolvido em Python para gerenciamento de armários.
 - Python
 - JSON
 - Datetime
-
+- TKinter
 ## Como executar
 
 1. Clone o repositório
 2. Execute o arquivo:
 
 ```bash
-python Controle_Armarios.py
+python Interface.py
