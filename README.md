@@ -1,8 +1,8 @@
-##🔐 Sistema de Controle de Armários
+## 🔐 Sistema de Controle de Armários
 
 Sistema desktop desenvolvido em Python para gerenciamento de armários em escolas, academias, empresas e eventos.
 
-#Funcionalidades:
+# Funcionalidades:
 
 - Reserva de armários
 - Liberação manual
@@ -13,14 +13,14 @@ Sistema desktop desenvolvido em Python para gerenciamento de armários em escola
 - Persistência de dados em JSON
 - Interface gráfica intuitiva
 
-#Tecnologias:
+# Tecnologias:
 
 - Python
 - Tkinter
 - JSON
 - PyInstaller
 
-#Estrutura do Projeto:
+# Estrutura do Projeto:
 
 - Interface.py
 - Controle_Armarios.py
@@ -28,12 +28,12 @@ Sistema desktop desenvolvido em Python para gerenciamento de armários em escola
 - images.png
 
 
-#Como executar e Gerar executável:
+# Como executar e Gerar executável:
 
-- python Interface.py
-- pyinstaller --onefile --windowed Interface.py
+1. python Interface.py
+2. pyinstaller --onefile --windowed Interface.py
 
-#Melhorias implementadas na versão 2.0:
+# Melhorias implementadas na versão 2.0:
 
 - Interface reformulada
 - Busca sem diferenciação de acentos
@@ -43,8 +43,8 @@ Sistema desktop desenvolvido em Python para gerenciamento de armários em escola
 - Melhor experiência visual
 - Correções de estabilidade
 
-Autor
+Autor:
 
-Kauê da S. Oliveira 
+# Kauê da S. Oliveira 
 
 
