@@ -1,47 +1,47 @@
-🔐 Sistema de Controle de Armários
+##🔐 Sistema de Controle de Armários
 
 Sistema desktop desenvolvido em Python para gerenciamento de armários em escolas, academias, empresas e eventos.
 
-Funcionalidades:
+#Funcionalidades:
 
-Reserva de armários
-Liberação manual
-Busca por usuário
-Controle visual de disponibilidade
-Estatísticas em tempo real
-Expiração automática de reservas
-Persistência de dados em JSON
-Interface gráfica intuitiva
+- Reserva de armários
+- Liberação manual
+- Busca por usuário
+- Controle visual de disponibilidade
+- Estatísticas em tempo real
+- Expiração automática de reservas
+- Persistência de dados em JSON
+- Interface gráfica intuitiva
 
-Tecnologias:
+#Tecnologias:
 
-Python
-Tkinter
-JSON
-PyInstaller
+- Python
+- Tkinter
+- JSON
+- PyInstaller
 
-Estrutura do Projeto:
+#Estrutura do Projeto:
 
-Interface.py
-Controle_Armarios.py
-armarios.json
-images.png
+- Interface.py
+- Controle_Armarios.py
+- armarios.json
+- images.png
 
 
-Como executar e Gerar executável:
+#Como executar e Gerar executável:
 
-python Interface.py
-pyinstaller --onefile --windowed Interface.py
+- python Interface.py
+- pyinstaller --onefile --windowed Interface.py
 
-Melhorias implementadas na versão 2.0:
+#Melhorias implementadas na versão 2.0:
 
-Interface reformulada
-Busca sem diferenciação de acentos
-Logo institucional
-Expiração automática dos armários
-Estatísticas de ocupação
-Melhor experiência visual
-Correções de estabilidade
+- Interface reformulada
+- Busca sem diferenciação de acentos
+- Logo institucional
+- Expiração automática dos armários
+- Estatísticas de ocupação
+- Melhor experiência visual
+- Correções de estabilidade
 
 Autor
 
