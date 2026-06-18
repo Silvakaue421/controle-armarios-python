@@ -43,11 +43,6 @@ Estatísticas de ocupação
 Melhor experiência visual
 Correções de estabilidade
 
-
-![Tela Inicial](screenshots/Tela_Inicial.png)
-
-
-
 Autor
 
 Kauê da S. Oliveira 
