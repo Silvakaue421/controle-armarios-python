@@ -44,7 +44,7 @@ Melhor experiência visual
 Correções de estabilidade
 
 
-![Tela Principal](screenshots/Tela_Principal.png)
+![Tela Principal](screenshots/Tela_Inicial.png)
 
 
 
